@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { ArrowIcon } from "../icons"
+import { useNavigate } from "react-router-dom"
 
 export interface NavItem {
 	label: string
@@ -18,14 +19,23 @@ export const NavBarItem = ({
 }: NavItem) => {
 	const [showChildren, setshowChildren] = useState(false)
 
+	const navigate = useNavigate()
+
 	return (
 		<li
+			onClick={() => {
+				navigate(href)
+			}}
 			key={label}
-			className={`flex w-full font-sm items-center ${className || "font-semibold"}`}>
+			className={`flex w-full font-sm items-center ${
+				className || "font-semibold"
+			}`}>
 			{children ? (
 				<div className="w-full">
 					<button
-						className={`flex w-full p-2 rounded-md justify-between items-center ${!className && "gap-2"} hover:bg-highlight ${showChildren && "bg-highlight"}`}
+						className={`flex w-full p-2 rounded-md justify-between items-center ${
+							!className && "gap-2"
+						} hover:bg-highlight ${showChildren && "bg-highlight"}`}
 						onClick={() => {
 							setshowChildren(!showChildren)
 						}}>
