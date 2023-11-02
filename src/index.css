@@ -1,0 +1,23 @@
+body {
+	font-family: "Inter";
+}
+
+/* Cambiar el ancho del scrollbar a 10px */
+.scrollbar-w-10 {
+	scrollbar-width: 10px;
+}
+
+/* Cambiar el comportamiento del desplazamiento a fluido */
+.scrollbar-smooth {
+	scrollbar-behavior: smooth;
+}
+
+/* Cambiar el color del scrollbar a un degradado de rojo a azul */
+.scrollbar-gradient-red-blue {
+	scrollbar-thumb-color: linear-gradient(to right, red, blue);
+}
+
+/* Cambiar la forma del scrollbar a redonda */
+.scrollbar-thumb-rounded {
+	scrollbar-thumb-radius: 100px;
+}
