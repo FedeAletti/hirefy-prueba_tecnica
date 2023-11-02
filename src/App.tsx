@@ -13,65 +13,79 @@ import { NavItem, NavBarItem } from "./components/ui/NavItem"
 
 const LIST: NavItem[] = [
 	{
+		id: 11,
 		label: "Home",
 		icon: <HomeIcon />,
 		href: "/",
 	},
 	{
+		id: 12,
 		label: "How it works",
 		icon: <QuestionIcon />,
 		href: "/",
 	},
 	{
+    id: 13,
 		label: "Marketplace",
 		icon: <MarketPlaceIcon />,
 		href: "/",
 	},
 	{
+		id: 14,
 		label: "For Talents",
 		icon: <ForTalentsIcon />,
 		href: "/",
 	},
 	{
+		id: 15,
 		label: "Categories",
 		icon: <CategoriesIcon />,
 		href: "/",
 		children: [
 			{
+				id: 1,
 				label: "Lorem ipsum",
 				href: "/",
 			},
 			{
+				id: 2,
 				label: "Lorem ipsum",
 				href: "/",
 			},
 			{
+				id: 3,
 				label: "Lorem ipsum",
 				href: "/",
 				children: [
 					{
+						id: 4,
 						label: "Lorem ipsum",
 						href: "/",
 					},
 					{
+						id: 5,
 						label: "Lorem ipsum",
 						href: "/",
 					},
 				],
 			},
 			{
+				id: 6,
 				label: "Lorem ipsum",
 				href: "/",
 			},
 			{
+				id: 7,
 				label: "Lorem ipsum",
 				href: "/",
 				children: [
 					{
+						id: 8,
 						label: "Lorem ipsum",
 						href: "/",
 					},
 					{
+						id: 9,
 						label: "Lorem ipsum",
 						href: "/",
 					},
@@ -97,9 +111,10 @@ function App() {
 					</div>
 				</header>
 				<ul className="flex-1 mt-5 space-y-2 mx-3 overflow-y-auto">
-					{LIST.map(({ label, icon, href, children }) => (
+					{LIST.map(({ id, label, icon, href, children }) => (
 						<NavBarItem
-							key={label}
+							key={id}
+							id={id}
 							label={label}
 							icon={icon}
 							href={href}

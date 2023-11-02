@@ -3,6 +3,7 @@ import { ArrowIcon } from "../icons"
 import { useNavigate } from "react-router-dom"
 
 export interface NavItem {
+	id: string | number
 	label: string
 	icon?: JSX.Element
 	href: string
@@ -57,7 +58,8 @@ export const NavBarItem = ({
 						}`}>
 						{children.map((child) => (
 							<NavBarItem
-								key={child.label}
+								key={child.id}
+                                id={child.id}
 								label={child.label}
 								icon={child.icon}
 								href={child.href}
